@@ -1,5 +1,15 @@
 server:
   port: 8080
+
 spring:
-  main:
-    allow-bean-definition-overriding: true
+  datasource:
+#    url: r2dbc:pool:postgres://localhost:5432/Event_aggregator
+    url: jdbc:postgresql://localhost:5432/Event_aggregator
+    username: postgres
+    password: rootroot1
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    #      ddl-auto: create-drop
+    show-sql: true

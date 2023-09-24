@@ -22,15 +22,13 @@
 		<jjwt-api>0.11.5</jjwt-api>
 		<jjwt-impl>0.11.5</jjwt-impl>
 		<jjwt-jackson>0.11.5</jjwt-jackson>
-		<!--		- MapStruct-->
-<!--		- PostgreSQL-->
 <!--		- Flyway-->
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-r2dbc</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-data-r2dbc</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
