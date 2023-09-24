@@ -18,7 +18,10 @@
 		<postgre>42.6.0</postgre>
 		<lombok>1.18.28</lombok>
 		<mapstruct>1.5.3.Final</mapstruct>
-
+		<jaxb-api>2.4.0-b180830.0359</jaxb-api>
+		<jjwt-api>0.11.5</jjwt-api>
+		<jjwt-impl>0.11.5</jjwt-impl>
+		<jjwt-jackson>0.11.5</jjwt-jackson>
 		<!--		- MapStruct-->
 <!--		- PostgreSQL-->
 <!--		- Flyway-->
@@ -40,6 +43,26 @@
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
 			<version>${mapstruct}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>${jaxb-api}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>${jjwt-api}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>${jjwt-impl}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>${jjwt-jackson}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
