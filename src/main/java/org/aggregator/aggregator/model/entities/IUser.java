@@ -1,6 +1,6 @@
-package org.aggregator.aggregator.entities;
+package org.aggregator.aggregator.model.entities;
 
-interface IUser {
+public interface IUser {
     void message();
 //    void reply();
     void vote(IUser user);
