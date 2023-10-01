@@ -1,24 +1,29 @@
 package org.aggregator.aggregator.model.dao.user;
 
+import lombok.RequiredArgsConstructor;
 import org.aggregator.aggregator.model.entities.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
+@RequiredArgsConstructor
 public class UserService implements IDaoUser{
+
+    private final UserRepository repository;
     @Override
     public List<User> findAll() {
-        return null;
+        return (List<User>) repository.findAll();
     }
 
     @Override
     public Optional<User> findById(Integer id) {
-        return Optional.empty();
+        return repository.findById(id);
     }
 
     @Override
     public User save(User user) {
-        return null;
+        return repository.save(user);
     }
 
     @Override
@@ -33,7 +38,7 @@ public class UserService implements IDaoUser{
 
     @Override
     public Optional<User> findUserByName(String name) {
-        return Optional.empty();
+        return repository.findByUsername(name);
     }
 
     @Override
