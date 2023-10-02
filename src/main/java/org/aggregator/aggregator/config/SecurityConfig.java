@@ -1,19 +1,23 @@
 package org.aggregator.aggregator.config;
 
 import lombok.RequiredArgsConstructor;
+//import org.aggregator.aggregator.jwt.JwtRequestFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
+//    private final JwtRequestFilter filter;
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
@@ -36,7 +40,7 @@ public class SecurityConfig {
                 //Выдаём ошибку при непредоставленном токене, аля 401 ошибка
                 .exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
                 .and()
-//                .addFilterBefore()
+//                .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin((form) -> form
                         .loginPage("/login")
                         .failureUrl("/login?error=true")
@@ -48,4 +52,5 @@ public class SecurityConfig {
                         .logoutSuccessUrl("/"));
         return http.build();
     }
+
 }

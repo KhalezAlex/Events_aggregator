@@ -1,12 +1,14 @@
 package org.aggregator.aggregator.model.dao.user;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.aggregator.aggregator.model.entities.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class UserService implements IDaoUser{
 

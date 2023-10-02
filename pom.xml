@@ -22,7 +22,7 @@
 		<jjwt-api>0.11.5</jjwt-api>
 		<jjwt-impl>0.11.5</jjwt-impl>
 		<jjwt-jackson>0.11.5</jjwt-jackson>
-		<flyway>9.17.0</flyway>
+<!--		<flyway>9.17.0</flyway>-->
 	</properties>
 	<dependencies>
 <!--		<dependency>-->
@@ -70,11 +70,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-			<version>${flyway}</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.flywaydb</groupId>-->
+<!--			<artifactId>flyway-core</artifactId>-->
+<!--			<version>${flyway}</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -98,6 +98,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>3.2.0-M3</version>
 		</dependency>
 	</dependencies>
 

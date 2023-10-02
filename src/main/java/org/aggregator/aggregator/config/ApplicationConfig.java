@@ -5,6 +5,7 @@ import org.aggregator.aggregator.model.dao.user.UserRepository;
 import org.aggregator.aggregator.security.PBFDK2Encoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
@@ -20,9 +21,7 @@ public class ApplicationConfig {
     @Bean
     public UserDetailsService userDetailsService(){
         return username -> userRepository.findByUsername(username)
-//                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-                .orElseThrow(() -> new UsernameNotFoundException(
-                        String.format("User '%s' not found", username)));
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 
     @Bean
