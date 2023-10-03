@@ -1,2 +1,3 @@
-package org.aggregator.aggregator.model.entities;public class ExecutorProfile {
+package org.aggregator.aggregator.model.entities;
+public class ExecutorProfile {
 }

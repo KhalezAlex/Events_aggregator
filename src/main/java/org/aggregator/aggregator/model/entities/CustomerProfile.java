@@ -1,2 +1,3 @@
-package org.aggregator.aggregator.model.entities;public class Profile {
-}
+package org.aggregator.aggregator.model.entities;
+//public class Profile {
+//}

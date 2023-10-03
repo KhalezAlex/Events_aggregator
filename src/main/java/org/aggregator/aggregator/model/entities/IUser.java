@@ -1,4 +1,4 @@
-package org.aggregator.aggregator.entities;
+package org.aggregator.aggregator.model.entities;
 
 public interface IUser {
     void message();
