@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @RequiredArgsConstructor
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages = "org.aggregator.aggregator.model.dao.user")
 public class ApplicationConfig {
     private final UserRepository userRepository;
 
