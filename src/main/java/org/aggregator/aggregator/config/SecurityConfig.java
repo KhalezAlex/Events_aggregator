@@ -36,10 +36,10 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 //Отключаем сессие у реста в куках
-                .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                //Выдаём ошибку при непредоставленном токене, аля 401 ошибка
-                .exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
-                .and()
+//                .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+//                //Выдаём ошибку при непредоставленном токене, аля 401 ошибка
+//                .exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
+//                .and()
 //                .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin((form) -> form
                         .loginPage("/login")
