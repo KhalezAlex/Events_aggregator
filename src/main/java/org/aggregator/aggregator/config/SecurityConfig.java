@@ -1,12 +1,10 @@
 package org.aggregator.aggregator.config;
 
 import lombok.RequiredArgsConstructor;
-//import org.aggregator.aggregator.jwt.JwtRequestFilter;
 import org.aggregator.aggregator.jwt.JwtRequestFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -31,10 +29,9 @@ public class SecurityConfig {
                         .requestMatchers("/register/chefSubs").hasRole("CHEF")
                         .requestMatchers("/register/bartenderSubs").hasRole("HEAD_BARTENDER")
                         .requestMatchers("/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/logout").authenticated()
-                        .requestMatchers("/registration").anonymous()
-                        .requestMatchers("/registration").permitAll()
-//                        .anyRequest().permitAll()
+//                        .requestMatchers("").authenticated()
+//                        .requestMatchers("/registration").anonymous()
+                        .requestMatchers("/registration", "/auth").permitAll()
                         .anyRequest().authenticated()
                 )
                 //Отключаем сессие у реста в куках
