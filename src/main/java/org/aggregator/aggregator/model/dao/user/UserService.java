@@ -45,7 +45,7 @@ public class UserService implements IDaoUser{
 
     @Override
     public User findUserByUsername(String name) {
-        return null;
+        return repository.findUserByUsername(name);
     }
 
     @Override
